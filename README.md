@@ -6,6 +6,214 @@
     <title>Mon CV</title>
     <link rel="stylesheet" href="Styles/cvresp.css">
 </head>
+<script>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+    color:rgb(230, 75, 14);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.navbar-links a {
+    color:rgb(145, 117, 106);
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.navbar-toggle-label {
+    display: none;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.photo {
+    flex: 1;
+    max-width: 200px;
+    margin-right: 20px;
+}
+
+#retourEnHaut {
+    display: none; 
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    padding: 10px;
+    background-color: #000;
+    border-radius: 10px;
+    color:rgb(230, 75, 14);
+    cursor: pointer;
+  }
+  
+.photo img {
+    max-width: 100%;
+    border-radius: 16px;
+}
+
+.left, .right {
+    flex: 1;
+    margin-right: 30px;
+}
+
+h1 {
+    color:rgb(26, 127, 211);
+}
+
+#jpp {
+    color: black;
+}
+
+h2 {
+    margin-top: 40px;
+    color:blue;
+    font-size:xx-large;    
+}
+
+h3 {
+    margin-top: 40px;
+    color:rgb(38, 130, 206);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.job, .education {
+    margin-bottom: 20px;
+}
+
+.job h3, .education h3 {
+    margin-top: 0;
+}
+
+#experience,
+#education,
+#skills {
+  border: 1px solid #d1b1b1;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.li {
+    list-style: none;
+    font-size: larger;
+    text-decoration: none;
+
+}
+
+.nli {
+    list-style: none;
+    font-size: small;
+    padding-left: 20px;
+}
+
+.logos-container {
+    display: flex;
+}
+
+.logo {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+.logo1 {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+  
+@media screen and (max-width: 600px) 
+{
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+     .navbar-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 20px;
+        width: 100%;
+        padding: 0;
+    }    
+
+    .navbar-toggle-label {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5em;
+        margin-right: 20px;
+    }
+
+    #navbar-toggle:checked ~ .navbar-links {
+        display: flex;
+    }
+
+    .photo {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .info {
+        text-align: center;
+    }
+
+    .left, .right {
+        margin: 0;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .navbar-links a {
+        margin: 10px 0;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+    }
+
+    .logo1 {
+        width: 35px;
+        height: 35px;
+        margin-right: 10px;
+    }
+
+}
+</script>
 <body>
     <button id="retourEnHaut" onclick="retourEnHaut()">Retour en haut</button>
     <nav class="navbar">
